@@ -2,3 +2,8 @@
   title: Grand Theft Auto
   type: Action
   ability: Take an opponent's vehicle. It is now yours.
+-
+  title: Regroup
+  type: Action
+  ability: Remove all tokens from your cards in play. Redistribute all your tokens to your cards in play.
+

@@ -35,12 +35,37 @@ Prawn::Document.generate('output/cards.pdf', page_size: [2.75 * 72, 3.75 * 72], 
       rectangle [0, CARD_HEIGHT], CARD_WIDTH, CARD_HEIGHT
     end
 
+    color = "0000AA"
+
+    if card['type'] == 'Action'
+      color = "FF9900"
+    end
+
+    if card['type'] == 'Enemy'
+      color = "FF0000"
+    end
+
+    if card['type'] == 'Character'
+      color = "00AA00"
+    end
+
+    fill_color color
+
     font "Helvetica", style: :bold, size: 12 do
-      text_box card['title'], at: [9, CARD_HEIGHT - 9]
+      text_box card['title'], at: [9, CARD_HEIGHT - 9], align: :center
     end
-    font "Helvetica", style: :normal, size: 8 do
-      text_box card['type'], at: [9, CARD_HEIGHT - 27]
+
+    fill_rectangle [0, CARD_HEIGHT - 23], CARD_WIDTH, 18
+
+    fill_color "ffffff"
+
+    fill do
+      font "Helvetica", style: :normal, size: 8 do
+        text_box card['type'], at: [9, CARD_HEIGHT - 28], align: :center
+      end
     end
+
+    fill_color "000000"
 
     if card['description']
       font "Helvetica", style: :normal, size: 8 do

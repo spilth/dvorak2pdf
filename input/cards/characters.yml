@@ -8,3 +8,9 @@
   type: Character
   tokens: 4
   ability: Instead of dying you can keep all your items and return to the game in 2 turns.
+-
+  title: Warrior of the Wasteland
+  type: Character
+  tokens: 3
+  ability: You mumble anything you tell another player.
+  flavor: Hey, it's that Paper Chase guy.
