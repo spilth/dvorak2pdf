@@ -1,0 +1,11 @@
+-
+  title: Chainsaw
+  type: Weapon
+  tokens: 1
+-
+  title: Boomstick
+  type: Weapon
+  description: This... is your boomstick!
+  tokens: 4
+  ability: When you are attacked you can remove 1 token to negate the attack.
+  flavor: "Alright you Primitive Screwheads, listen up! You see this? This... is my boomstick!"

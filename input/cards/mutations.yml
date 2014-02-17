@@ -1,0 +1,11 @@
+-
+  title: Thin-skinned
+  type: Mutation
+  flavor: "Dude, your skin is turning, like, transparent?!"
+  ability: When you are successfully attacked remove 1 extra health token.
+-
+  title: Secretion
+  type: Mutation
+  flavor: "Ewww, don't shake my hand anymore."
+  ability: At the end of your turn roll a d6. On 2 or less, randomly lose one item.
+

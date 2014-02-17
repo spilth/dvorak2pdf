@@ -5,15 +5,32 @@ require 'pry'
 CARD_WIDTH = 72 * 2.5
 CARD_HEIGHT = 72 * 3.5
 
-cards = YAML.load_file('cards.yml')
+actions = YAML.load_file('input/cards/actions.yml')
+armor = YAML.load_file('input/cards/armor.yml')
+characters = YAML.load_file('input/cards/characters.yml')
+enemies = YAML.load_file('input/cards/enemies.yml')
+goods = YAML.load_file('input/cards/goods.yml')
+locations = YAML.load_file('input/cards/locations.yml')
+mutations = YAML.load_file('input/cards/mutations.yml')
+vehicles = YAML.load_file('input/cards/vehicles.yml')
+weapons = YAML.load_file('input/cards/weapons.yml')
 
-Prawn::Document.generate('cards.pdf', page_size: [2.75 * 72, 3.75 * 72], margin: 9) do
+cards = []
+cards.concat actions
+cards.concat armor
+cards.concat characters
+cards.concat enemies
+cards.concat goods
+cards.concat locations
+cards.concat mutations
+cards.concat vehicles
+cards.concat weapons
+
+Prawn::Document.generate('output/cards.pdf', page_size: [2.75 * 72, 3.75 * 72], margin: 9) do
   on_first_page = true
   cards.each do |card|
-    # binding.pry
     start_new_page unless on_first_page
 
-    # stroke_axis
     stroke do
       rectangle [0, CARD_HEIGHT], CARD_WIDTH, CARD_HEIGHT
     end

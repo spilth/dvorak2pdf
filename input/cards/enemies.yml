@@ -1,0 +1,9 @@
+-
+  title: Zombie!
+  type: Enemy
+  flavor: "Zom-bay, zom-bay. zom-bay-ay-ay-ay-oh!"
+-
+  title: Killer Klown
+  type: Enemy
+  description: From outer space.
+  flavor: In space no one can eat ice cream.
